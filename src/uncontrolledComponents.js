@@ -43,7 +43,32 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
+        <form onSubmit={onSubmit}>
+          <div>
+            <label htmlFor="username" >Username</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              defaultValue={username}
+              onChange={onUsernameChange}
+            // onBlur={onUsernameChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              defaultValue={email}
+              onChange={onEmailChange}
+            />
+          </div>
+          <div>
+            <input type="submit" value="send" />
+          </div>
+        </form>
       </header>
     </div>
   );
